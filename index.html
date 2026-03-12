@@ -3,221 +3,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="VPlaza is a game/pr_xy site full of games all kids want and need. Meet your expectations with Vplaza Games V1">
+    <link rel="stylesheet" href="main.css">
 
-    <style id="theme">:root {
-    --primary-light: 185, 120, 240;
-    --primary-mid: 175, 100, 240;
-    --primary-dark: 160, 100, 240;
-    --primary-darker: 120, 75, 180;
-    --background-dark: 0, 0, 0;
-    --background-light: 30, 15, 40;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-::-webkit-scrollbar {
-    width: 8px;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-::-webkit-scrollbar-track {
-    background: rgba(var(--primary-light));
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(var(--primary-dark));
-    border-radius: 10px;
-    margin: 2px;
-    border: 2px solid rgba(var(--primary-light));
-}</style>
-
-    <script src="/scripts/common.js" type="module" defer=""></script>
-
-    <!--the stuffs-->
-    <script type="module" src="/index.js" defer=""></script>
-    <script src="/scripts/particles.min.js"></script>
-    <!---->
-
-    <link rel="prefetch" href="/scripts/common.js">
-    <script src="/baremux/index.js"></script>
-    <script src="/scripts/util/set-transport.js" type="module"></script>
-
-    <!--scramjet-->
-    
-    <!---->
-
-    <!--uv-->
-    <script src="/math/bundle.js"></script>
-    <script src="/math/config.js"></script>
-    <!---->
-
-    <link rel="stylesheet" href="/index.css">
-    <link rel="stylesheet" href="/css/loading.css">
-    <link id="window_favicon" rel="icon" href="/images/icons/logo.webp" type="image/webp">
-    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
-
-    <!--open graph-->
-
-    <!---->
-
-    <!--standard meta stuff-->
-    <meta name="theme-color" content="#af64f0">
-    <meta name="robots" content="index,follow,noodp">
-    <link rel="canonical" href="https://study.com">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://study.com/images/reDesign/home/social-image-1200x628.png">
-    <meta property="og:image:type" content="image/png">
-
-    <meta property="og:title" content="Online Courses for College Credit, Exam Prep &amp; K-12 | Study.com">
-
-    <meta property="og:description" content="Take online courses on Study.com that are fun and engaging. Pass exams to earn real college credit. Research schools and degrees to further your education.">
-    <meta property="og:url" content="https://study.com">
-
-    <meta property="og:site_name" content="study.com">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="1 days">
-    <!---->
-
-    <!--apple touch-->
-    <link rel="apple-touch-icon" href="/icons/logo_128x128.webp">
-    <link rel="apple-touch-startup-image" href="/icons/logo_512x512.webp">
-    <!---->
-
-    <title id="window_title">UniUB v4</title>
-
-    <noscript>
-        <div class="noscript"><kbd>This site won't work unless you enable javascript!<br>Please enable javascript to
-                view the site!</kbd><br><kbd>-jobi</kbd></div>
-    </noscript>
-<style>#ad{display: flex !important;}</style><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FG22JV74V5"></script><script src="/scripts/util/hover.js"></script>
-        <link rel="stylesheet" href="/css/common.css">
-        
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
-    <style>
-.tooltip {
-    position: absolute;
-    background: rgba(27, 13, 41, 0.7);
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 14px;
-    font-family: sans-serif;
-    white-space: nowrap;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
-    z-index: 9999;
-}
-
-.tooltip.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-</style></head>
+    <title>Vplaza - Games</title>
+</head>
 <body>
-    <div id="underlay"><canvas class="particles-js-canvas-el" width="1124" height="828" style="width: 100%; height: 100%;"></canvas></div>
-    <div id="loader" style="transition: 0.2s; opacity: 0;">
-        <div class="load-bar"></div>
-    </div>
-    <iframe style="position: absolute; width: 100dvw; height: 100dvh;" id="frame" src="/pages/home/"></iframe>
-    <div class="main">
-        <div style="position: relative; width: 100%; height: 100px; background-color: transparent; display: flex;">
-            <div class="corner-sidebar" style="justify-content: start;">
-                <div onclick="hideIcons(this)" id="hover" class="item" data-title="Hide Navbar">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-            </div>
-            <div style="flex-grow: 1;"></div>
-            <div class="sidebar">
-                <div data-url="home" id="hover" class="item" data-title="Home" style="box-shadow: 0 0 5px 1px rgb(var(--primary-mid));">
-                    <i class="fa-solid fa-house fa-fw"></i>
-                </div>
-                <div data-url="zones" id="hover" class="item" data-title="Zones" style="">
-                    <i class="fa-solid fa-gamepad fa-fw"></i>
-                </div>
-                <div data-url="apps" id="hover" class="item" data-title="Apps" style="">
-                    <i class="fa-solid fa-grid"></i>
-                </div>
-                <!--<div data-url="search" id="hover" class="item" data-title="Search">
-                    <i class="fa-solid fa-magnifying-glass fa-fw"></i>
-                </div>-->
-                <div data-url="links" id="hover" class="item" data-title="Links" style="">
-                    <i class="fa-solid fa-link-simple"></i>
-                </div>
-                <div data-url="media" id="hover" class="item" data-title="Media" style="">
-                    <i class="fa-solid fa-video"></i>
-                </div>
-                <div data-url="music" id="hover" class="item" data-title="Music" style="">
-                    <i class="fa-solid fa-music-note"></i>
-                </div>
-                <!--<div data-url="tools" id="hover" class="item" data-title="Tools">
-                    <i class="fa-solid fa-screwdriver-wrench fa-fw"></i>
-                </div>-->
-                <div data-url="settings" id="hover" class="item" data-title="Settings" style="">
-                    <i class="fa-solid fa-gear fa-fw"></i>
-                </div>
 
+    <div class="navbar">
+        <header>
+            <div class="head-left">
+                <img src="V.png" alt="logo">
             </div>
-            <div style="flex-grow: 1;"></div>
-            <div class="corner-sidebar" style="justify-content: end;">
-                <div data-url="info" id="hover" class="item" data-title="Info" style="">
-                    <i class="fa-solid fa-circle-info"></i>
-                </div>
+            <div class="head-right">
+                <p><a href="#">Home</a></p>
+                <p><a href="a">Apps</a></p>
+                <p><a href="ai">AI</a></p>
+                <p><a href="info">Pr_xy</a></p>
             </div>
-        </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search games..." class="search-bar" />
+            </div>
+        </header>
     </div>
 
-<script>
-    // load scramjet globally :tongue:
-    const { ScramjetController } = $scramjetLoadController();
+    <div class="no-results-message" id="noResultsMessage" style="display:none;">
+        <h2>No results found...</h2>
+        <p>Try a different search term!</p>
+    </div>
 
-    const scramjet = new ScramjetController({
-        files: {
-            wasm: "/science/scramjet.wasm.wasm",
-            all: "/science/scramjet.all.js",
-            sync: "/science/scramjet.sync.js",
-        },
-        prefix: "/*/%/"
-    });
-    window.scramjet = scramjet;
+    <main class="games-section">
+        <section class="section">
+            <h2>Popular Titles</h2>
+            <div class="games-grid">
+                <div class="game-card"data-url="games/poly-track">
+                    <img src="images/polytrack.png" alt="Polytrack">
+                    <div class="game-info">
+                        <a>Most popular driving game.</a>
+                        <h3>Polytrack</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/krunker">
+                    <img src="images/krunker.jpg" alt="Krunker">
+                    <div class="game-info">
+                        <a>Most Popular</a>
+                        <h3>Krunker</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/blockblast">
+                    <img src="images/blockblast.png" alt="Block Blast">
+                    <div class="game-info">
+                        <h3>Block Blast</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/snowrider.html">
+                    <img src="images/snow-rider3d.jpg" alt="Snow Rider 3D">
+                    <div class="game-info">
+                        <h3>Snow Rider 3D</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>All Titles</h2>
+            <div class="games-grid">
+                <div class="game-card" data-url="games/retro-bowl">
+                    <img src="images/retro-bowl.jpg" alt="retro-bowl">
+                    <div class="game-info">
+                        <h3>Retro Bowl</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/1v1lol">
+                    <img src="images/1v1lol.jpg" alt="1v1 Lol">
+                    <div class="game-info">
+                        <h3>1v1 lol</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/slope">
+                    <img src="images/slope.jpg" alt="slope">
+                    <div class="game-info">
+                        <h3>Slope</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/subwaysurfers">
+                    <img src="images/subway-surferss.png" alt="subwaysurfers">
+                    <div class="game-info">
+                        <h3>Subway Surfers</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/baskball-stars">
+                    <img src="images/basketball-stars.jpg" alt="basket-ball-stars">
+                    <div class="game-info">
+                        <h3>Basket Ball Stars</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/drive-mad">
+                    <img src="images/drive-mad.jpg" alt="drive-mad">
+                    <div class="game-info">
+                        <h3>Drive mad</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/death-run-3d">
+                    <img src="images/death-run-3d.jpg" alt="deathrun">
+                    <div class="game-info">
+                        <h3>Death Run</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/basket-random">
+                    <img src="images/basket-random.jpg" alt="basket-random">
+                    <div class="game-info">
+                        <h3>Basket Random</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/motox3m2">
+                    <img src="images/motox3m.jpg" alt="motox3m2">
+                    <div class="game-info">
+                        <h3>MotoX3M</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/bitlife">
+                    <img src="images/bitlife.jpg" alt="bitlife">
+                    <div class="game-info">
+                        <h3>Bitlife</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/get-away">
+                    <img src="images/getaway-shootout.jpg" alt="getaway-shootout">
+                    <div class="game-info">
+                        <h3>Get Away Shootout</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/justfall-lol">
+                    <img src="images/justfall-lol.jpg" alt="justfall-lol">
+                    <div class="game-info">
+                        <h3>Just Fall</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/rooftop-snipers">
+                    <img src="images/rooftop-snipers.jpg" alt="rooftop-snipers">
+                    <div class="game-info">
+                        <h3>Rooftop Snipers</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/cookieclicker">
+                    <img src="images/cookie-clicker.jpg" alt="cookie-clicker">
+                    <div class="game-info">
+                        <h3>Cookie Clicker</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/2048">
+                    <img src="images/2048.jpg" alt="2048">
+                    <div class="game-info">
+                        <h3>2048</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/snowrider.html">
+                    <img src="images/snow-rider3d.jpg" alt="snow-rider3d">
+                    <div class="game-info">
+                        <h3>Snow Rider</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/eagler">
+                    <img src="images/minecraft.jpg" alt="eagler">
+                    <div class="game-info">
+                        <h3>Minecraft</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/learn-to-fly-2">
+                    <img src="images/learn-to-fly-2.jpg" alt="learn-to-fly-2">
+                    <div class="game-info">
+                        <h3>Learn to fly 2</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/idle-mining-empire">
+                    <img src="images/idle-mining-empire.jpg" alt="idle-mining-empire">
+                    <div class="game-info">
+                        <h3>Idle Mining Empire</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/learn-to-fly-2">
+                    <img src="images/among-us.jpg" alt="among-us">
+                    <div class="game-info">
+                        <h3>Among Us</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/paper-io-2">
+                    <img src="images/paper-io-2.jpg" alt="paper-io-2">
+                    <div class="game-info">
+                        <h3>Paper IO 2</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/flappybird">
+                    <img src="images/flappy-bird.jpg" alt="flappy-bird">
+                    <div class="game-info">
+                        <h3>Flappy Bird</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/krunker">
+                    <img src="images/krunker.jpg" alt="krunker">
+                    <div class="game-info">
+                        <h3>Krunker</h3>
+                        <a>Most Popular</a>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/geometry-dash-lite">
+                    <img src="images/geometry-dash.jpg" alt="geometry-dash">
+                    <div class="game-info">
+                        <h3>Geometry Dash</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/baldis-basics">
+                    <img src="images/baldis-basics.jpg" alt="baldis-basics">
+                    <div class="game-info">
+                        <h3>Baldis Basics</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/superhot">
+                    <img src="images/superhot.jpg" alt="superhot">
+                    <div class="game-info">
+                        <h3>Super Hot</h3>
+                        <a>Very Popular</a>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/temple-run-2">
+                    <img src="images/temple-run-2.jpg" alt="temple-run-2">
+                    <div class="game-info">
+                        <h3>Temple Run 2</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/happy-wheels">
+                    <img src="images/happy-wheels.jpg" alt="happy-wheels">
+                    <div class="game-info">
+                        <h3>Happy Wheels</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/crossyroad">
+                    <img src="images/crossy-road.jpg" alt="crossy-road">
+                    <div class="game-info">
+                        <h3>Crossy Road</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/stickmanhook">
+                    <img src="images/stickmanhook.jpg" alt="stickmanhook">
+                    <div class="game-info">
+                        <h3>Stickman Hook</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/tag">
+                    <img src="images/tag.jpg" alt="tag">
+                    <div class="game-info">
+                        <h3>Tag</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/poly-track">
+                    <img src="images/polytrack.jpg" alt="poly-track">
+                    <div class="game-info">
+                        <h3>Poly Track</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/tetris">
+                    <img src="images/tetris.jpg" alt="tetris">
+                    <div class="game-info">
+                        <h3>Tetris</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/counter-strike">
+                    <img src="images/csgo.png" alt="csgo">
+                    <div class="game-info">
+                        <h3>Counter Strike</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/tombofthemask.html">
+                    <img src="images/totm.png" alt="totm">
+                    <div class="game-info">
+                        <h3>Tomb of The Mask</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/supermario64.html">
+                    <img src="images/supermario64.png" alt="supermario64">
+                    <div class="game-info">
+                        <h3>Super Mario 64</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/rocket-league">
+                    <img src="images/rocket-league.png" alt="rocket-league">
+                    <div class="game-info">
+                        <h3>Rocket League</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/candycrush">
+                    <img src="images/candycrush.png" alt="candycrush">
+                    <div class="game-info">
+                        <h3>Candy Crush</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/helixjump">
+                    <img src="images/helixjump.png" alt="helixjump">
+                    <div class="game-info">
+                        <h3>Helix Jump</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/yohoho">
+                    <img src="images/yohoho.png" alt="yohoho">
+                    <div class="game-info">
+                        <h3>Yohoho.io</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/drifthunters">
+                    <img src="images/drifthunters.png" alt="drifthunters">
+                    <div class="game-info">
+                        <h3>Drift Hunters</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/thelittlegiant">
+                    <img src="images/thelittlegiant.png" alt="tlg">
+                    <div class="game-info">
+                        <h3>The Little Giant</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/deathsoul">
+                    <img src="images/deathsoul.png" alt="deathsoul">
+                    <div class="game-info">
+                        <h3>Death Soul</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/fnaf">
+                    <img src="images/fnaf.png" alt="fnaf">
+                    <div class="game-info">
+                        <h3>FNAF</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/fnaw">
+                    <img src="images/fnaw.png" alt="fnaw">
+                    <div class="game-info">
+                        <h3>FNAW</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/bloxorz.html">
+                    <img src="images/bloxorz.png" alt="bloxorz">
+                    <div class="game-info">
+                        <h3>Bloxorz</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/tiny-fishing.html">
+                    <img src="images/tiny-fishing.png" alt="tiny-fishing">
+                    <div class="game-info">
+                        <h3>Tiny Fishing</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/time-shooter.html">
+                    <img src="images/time-shooter.png" alt="time-shooter">
+                    <div class="game-info">
+                        <h3>Time Shooter</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/watermelon.html">
+                    <img src="images/watermelon.png" alt="watermelon">
+                    <div class="game-info">
+                        <h3>Suika Watermelon mix</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/territory">
+                    <img src="images/territory.png" alt="territory">
+                    <div class="game-info">
+                        <h3>Territorial.io</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/survivalrace.html">
+                    <img src="images/survivalrace.png" alt="survivalrace">
+                    <div class="game-info">
+                        <h3>Survival Race</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/stack.html">
+                    <img src="images/stack.png" alt="stack">
+                    <div class="game-info">
+                        <h3>Stack</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/basketbrosio">
+                    <img src="images/basket-bros.png" alt="basket-bros">
+                    <div class="game-info">
+                        <h3>Basket Bros</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/backrooms">
+                    <img src="images/backrooms.png" alt="backrooms">
+                    <div class="game-info">
+                        <h3>Backrooms</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/TheImpossibleQuiz">
+                    <img src="images/impossible.png" alt="impossible">
+                    <div class="game-info">
+                        <h3>Impossible Quiz</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/blockblast">
+                    <img src="images/blockblast.png" alt="blockblast">
+                    <div class="game-info">
+                        <h3>Block Blast</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/my-freind-pedro">
+                    <img src="images/my-friend-pedro.png" alt="my-friend-pedro">
+                    <div class="game-info">
+                        <h3>My friend Pedro</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/scrambled-eggs">
+                    <img src="images/scrambled-eggs.png" alt="scrambled-eggs">
+                    <div class="game-info">
+                        <h3>Scrambled Eggs</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/run-3">
+                    <img src="images/run.png" alt="run">
+                    <div class="game-info">
+                        <h3>RUN</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/impossible-quiz2">
+                    <img src="images/iq2.png" alt="impossible-quiz-2">
+                    <div class="game-info">
+                        <h3>Impossible quiz 2</h3>
+                        <a>A brain game.</a>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/goober-world">
+                    <img src="images/favicon.png" alt="run">
+                    <div class="game-info">
+                        <h3>Goober World</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/coreball">
+                    <img src="images/coreball.png" alt="coreball">
+                    <div class="game-info">
+                        <h3>Core Ball</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/driftboss">
+                    <img src="images/driftboss.png" alt="driftboss">
+                    <div class="game-info">
+                        <h3>Drift Boss</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/gunspin">
+                    <img src="images/gunspin.png" alt="gunspin">
+                    <div class="game-info">
+                        <h3>Gunspin</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/doors-online">
+                    <img src="images/doors.png" alt="doors">
+                    <div class="game-info">
+                        <h3>Doors</h3>
+                        <a>Coming eventually...</a>
+                    </div>
+                </div>
+        </section>
+    </main>
 
-    scramjet.init();
-
-    if (window.navigator) {
-        navigator.serviceWorker.register("/scripts/sw.js", { scope: "/*/%/" });
-    }
-    //
-
-    // make req for adding url to links db
-    (async () => {
-        try {
-            console.log("Attempting to add url to links db.")
-            let res = await fetch("/urls/add", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ "url": window.location.origin })
+    <script>
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const url = card.getAttribute('data-url');
+                if (url) {
+                    window.location.href = url;
+                }
             });
-            if (res.status === 409) {
-                console.log("Url already in db.")
-            }
-        } catch (e) {
-            console.error(e);
-        }
-        try { // no, this isn't for tracking, its for nowgg.fun
-            let res = await fetch("/ip");
-            let ip = await res.text();
-            localStorage.setItem("__ip", ip);
-        } catch (e) {
-            console.error(e);
-        }
-    })()
-    //
-</script>
-
-<span class="tooltip" style="left: 723px; top: 766px;">Home</span></body>
+        });
+    </script>
+    
+    
+    <script src="main.js"></script>
+</body>
 </html>
